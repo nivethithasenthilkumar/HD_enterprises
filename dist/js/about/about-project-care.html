@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Care | Hawk Dynamics Enterprises</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { box-sizing: border-box; }
+    * { font-family: 'Inter', sans-serif; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Manrope', sans-serif; }
+
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-20px)} }
+    @keyframes slide-up { from{transform:translateY(30px);opacity:0} to{opacity:1} }
+    @keyframes fade-in { from{opacity:0} to{opacity:1} }
+    @keyframes rotate-slow { from{transform:rotate(0)} to{transform:rotate(360deg)} }
+    @keyframes pulse-scale { 0%,100%{transform:scale(1);opacity:.4} 50%{transform:scale(1.1);opacity:.6} }
+
+    .animate-float { animation: float 4s ease-in-out infinite; }
+    .animate-slide-up { animation: slide-up .8s ease-out forwards; }
+    .animate-fade-in { animation: fade-in 1s ease-out forwards; }
+    .animate-rotate-slow { animation: rotate-slow 20s linear infinite; }
+    .animate-pulse-scale { animation: pulse-scale 3s ease-in-out infinite; }
+
+    .samsung-blue {
+      background: linear-gradient(135deg, #0D47A1 0%, #1976D2 100%);
+    }
+
+    .gold-gradient {
+      background: linear-gradient(135deg, #D4AF37 0%, #F4E5A1 100%);
+    }
+
+    .hover-lift {
+      transition: all .35s ease;
+    }
+
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(13,71,161,.15);
+    }
+  </style>
+</head>
+
+<body class="h-full bg-white">
+
+<!-- HEADER -->
+<header class="border-b border-gray-200 px-10 py-4">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+   <a href="../../index.html" class="flex items-center gap-3">
+  <img 
+    src="../../assets/icon-3.svg"
+    alt="Hawk Dynamics Enterprises Logo"
+    class="w-9 h-9 rounded-md object-contain"
+  >
+  <span class="font-semibold text-gray-900">
+    Hawk Dynamics Enterprises
+  </span>
+</a>
+
+
+    <a href="../index.html#contact"
+       class="samsung-blue text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:opacity-90">
+      Contact Us
+    </a>
+
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="flex-1 bg-white">
+  <div class="h-full flex">
+
+    <!-- LEFT HERO -->
+    <div class="w-2/5 border-r border-gray-200 p-12 flex items-center relative overflow-hidden animate-fade-in">
+
+      <div class="absolute top-20 left-10 w-64 h-64 border-2 border-blue-50 rounded-full animate-pulse-scale"></div>
+      <div class="absolute bottom-20 right-10 w-48 h-48 border-2 border-yellow-50 rounded-full animate-pulse-scale"></div>
+
+      <div class="relative z-10">
+        <div class="mb-8 animate-float">
+          <div class="w-20 h-20 relative">
+            <svg class="absolute inset-0 w-20 h-20 animate-rotate-slow" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="40" fill="none" stroke="#E3F2FD" stroke-width="3" stroke-dasharray="15 8"/>
+            </svg>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-14 h-14 samsung-blue rounded-full flex items-center justify-center shadow-xl">
+                <span class="text-white font-bold">PC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-6xl font-black text-gray-900 mb-6 leading-tight">
+          Project<br>Care
+        </h2>
+
+        <p class="text-gray-600 leading-relaxed mb-8">
+          End-to-end support ensuring your projects run smoothly from planning
+          to completion.
+        </p>
+
+        <a href="../index.html#contact"
+           class="samsung-blue text-white px-8 py-3 rounded-lg font-semibold hover:opacity-90">
+          Get Started
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="w-3/5 p-12 overflow-auto">
+      <div class="space-y-6 animate-slide-up">
+
+        <div class="flex gap-6 hover-lift">
+          <div class="w-16 h-16 samsung-blue rounded-xl flex items-center justify-center text-white font-bold">1</div>
+          <div class="flex-1 border border-gray-200 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Requirement Planning</h3>
+            <p class="text-gray-600 text-sm">
+              Complete material assessment, technical evaluation, and budget alignment.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 hover-lift">
+          <div class="w-16 h-16 gold-gradient rounded-xl flex items-center justify-center text-white font-bold">2</div>
+          <div class="flex-1 border border-gray-200 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Dedicated Support</h3>
+            <p class="text-gray-600 text-sm">
+              Single point of contact managing sourcing, logistics, and site coordination.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 hover-lift">
+          <div class="w-16 h-16 samsung-blue rounded-xl flex items-center justify-center text-white font-bold">3</div>
+          <div class="flex-1 border border-gray-200 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Timely Delivery</h3>
+            <p class="text-gray-600 text-sm">
+              On-schedule delivery with tracking and escalation handling.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 hover-lift">
+          <div class="w-16 h-16 gold-gradient rounded-xl flex items-center justify-center text-white font-bold">4</div>
+          <div class="flex-1 border border-gray-200 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">Quality Assurance</h3>
+            <p class="text-gray-600 text-sm">
+              Inspection, compliance verification, and documentation support.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 border border-gray-200 rounded-xl p-8 animate-fade-in">
+        <h3 class="text-lg font-bold text-gray-900 mb-6">Why Choose Hawk Dynamics</h3>
+        <div class="grid grid-cols-2 gap-6 text-sm font-semibold text-gray-900">
+          <div>⚡ Fast Response</div>
+          <div>✔ Zero Defects</div>
+          <div>₹ Cost Control</div>
+          <div>🔍 Full Transparency</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="border-t border-gray-200 py-6 text-center text-sm text-gray-600">
+  © Hawk Dynamics Enterprises | Rise Without Limits
+</footer>
+
+</body>
+</html>

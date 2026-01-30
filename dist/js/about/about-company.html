@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Industries We Serve | Hawk Dynamics Enterprises</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    body { box-sizing: border-box; }
+    * { font-family: 'Inter', sans-serif; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Manrope', sans-serif; }
+
+    @keyframes ripple { 0%{transform:scale(1);opacity:.6} 100%{transform:scale(1.8);opacity:0} }
+    @keyframes slide-up { from{transform:translateY(30px);opacity:0} to{transform:none;opacity:1} }
+    @keyframes fade-in { from{opacity:0} to{opacity:1} }
+    @keyframes rotate-badge { 0%{transform:rotate(0)} 100%{transform:rotate(360deg)} }
+    @keyframes pulse-scale { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }
+
+    .animate-slide-up { animation: slide-up .8s ease forwards; }
+    .animate-fade-in { animation: fade-in 1s ease forwards; }
+    .animate-rotate-badge { animation: rotate-badge 8s linear infinite; }
+    .animate-pulse-scale { animation: pulse-scale 2s ease-in-out infinite; }
+
+    .samsung-blue {
+      background: linear-gradient(135deg, #0D47A1 0%, #1976D2 100%);
+    }
+
+    .hover-lift {
+      transition: all .35s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(13,71,161,.25);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- ================= HEADER ================= -->
+<header class="border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+
+    <!-- Brand -->
+    <a href="../../index.html" class="flex items-center gap-3">
+  <img 
+    src="../../assets/icon-3.svg"
+    alt="Hawk Dynamics Enterprises Logo"
+    class="w-9 h-9 rounded-md object-contain"
+  >
+  <span class="font-semibold text-gray-900">
+    Hawk Dynamics Enterprises
+  </span>
+</a>
+
+
+    <!-- CTA -->
+   
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="py-16 border-b border-gray-100">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+
+    <h1 class="text-4xl font-bold text-gray-900 mb-4">
+      Industries We Serve
+    </h1>
+
+    <p class="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+      Hawk Dynamics Enterprises supports diverse industries with structured
+      procurement, verified sourcing, and delivery-focused execution.
+      Our experience spans industrial, infrastructure, and project-driven environments.
+    </p>
+
+  </div>
+</section>
+
+<!-- ================= INDUSTRIES GRID ================= -->
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+      <!-- Manufacturing -->
+      <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-800 transition">
+        <h3 class="font-semibold text-gray-900 mb-2">Manufacturing</h3>
+        <p class="text-sm text-gray-600">
+          Industrial plants, production units, and factory operations
+        </p>
+      </div>
+
+      <!-- Electrical -->
+      <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-800 transition">
+        <h3 class="font-semibold text-gray-900 mb-2">Electrical & Power</h3>
+        <p class="text-sm text-gray-600">
+          Power systems, panels, cabling, and electrical infrastructure
+        </p>
+      </div>
+
+      <!-- Infrastructure -->
+      <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-800 transition">
+        <h3 class="font-semibold text-gray-900 mb-2">Infrastructure</h3>
+        <p class="text-sm text-gray-600">
+          Commercial buildings, industrial campuses, and large-scale developments
+        </p>
+      </div>
+
+      <!-- EPC -->
+      <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-800 transition">
+        <h3 class="font-semibold text-gray-900 mb-2">EPC Projects</h3>
+        <p class="text-sm text-gray-600">
+          Engineering, procurement, and construction-based executions
+        </p>
+      </div>
+
+      <!-- IT & Automation -->
+      <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-800 transition">
+        <h3 class="font-semibold text-gray-900 mb-2">IT & Automation</h3>
+        <p class="text-sm text-gray-600">
+          Data centers, automation systems, and technology-driven facilities
+        </p>
+      </div>
+
+      <!-- Logistics -->
+      <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-800 transition">
+        <h3 class="font-semibold text-gray-900 mb-2">Logistics & Warehousing</h3>
+        <p class="text-sm text-gray-600">
+          Storage facilities, transport hubs, and distribution centers
+        </p>
+      </div>
+
+      <!-- Process -->
+      <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-800 transition">
+        <h3 class="font-semibold text-gray-900 mb-2">Process Industries</h3>
+        <p class="text-sm text-gray-600">
+          Chemical, pharmaceutical, and process-driven manufacturing
+        </p>
+      </div>
+
+      <!-- Multi Industry -->
+      <div class="border border-gray-200 rounded-xl p-6 text-center hover:border-blue-800 transition">
+        <h3 class="font-semibold text-gray-900 mb-2">Multi-Industry Projects</h3>
+        <p class="text-sm text-gray-600">
+          Complex projects involving multiple sectors and stakeholders
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="border-t border-gray-200 py-6 text-center text-sm text-gray-500">
+  © Hawk Dynamics Enterprises | Quality Sourcing · Cost Efficiency · Long-Term Support
+</footer>
+
+</body>
+</html>

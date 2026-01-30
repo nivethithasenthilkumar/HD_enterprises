@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Project-Oriented Services | Hawk Dynamics Enterprises</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+* {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background: #ffffff;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated background elements */
+.bg-shape {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+}
+.shape-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(20, 40, 160, 0.05), transparent);
+  border-radius: 50%;
+  top: 10%;
+  right: -100px;
+  animation: float1 25s infinite ease-in-out;
+}
+.shape-2 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(225deg, rgba(45, 93, 215, 0.04), transparent);
+  border-radius: 50%;
+  bottom: 15%;
+  left: -80px;
+  animation: float2 30s infinite ease-in-out;
+}
+.shape-3 {
+  width: 200px;
+  height: 200px;
+  border: 3px solid rgba(211, 213, 225, 0.08);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  top: 50%;
+  left: 10%;
+  animation: morph 20s infinite ease-in-out;
+}
+.shape-4 {
+  width: 150px;
+  height: 150px;
+  border: 2px solid rgba(45, 93, 215, 0.06);
+  transform: rotate(45deg);
+  bottom: 20%;
+  right: 15%;
+  animation: rotate360 40s infinite linear;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-50px, 80px); }
+}
+@keyframes float2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(80px, -50px); }
+}
+@keyframes morph {
+  0%, 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+  50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+}
+@keyframes rotate360 {
+  from { transform: rotate(45deg); }
+  to { transform: rotate(405deg); }
+}
+
+.page-header {
+  text-align: center;
+  padding: 80px 0 60px;
+  position: relative;
+  z-index: 1;
+}
+.page-header h1 {
+  color: #0d1b4d;
+  font-weight: 800;
+  font-size: 52px;
+  margin-bottom: 16px;
+  letter-spacing: -1.8px;
+  animation: fadeInDown 0.8s ease;
+}
+.page-header .subtitle {
+  color: #4a5568;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  animation: fadeInUp 0.8s ease 0.2s backwards;
+}
+.page-header .tagline {
+  color: #1428A0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeInUp 0.8s ease 0.4s backwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Timeline container */
+.timeline-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  z-index: 1;
+}
+
+/* Center line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, #1428A0, #2d5dd7, #1428A0, transparent);
+  transform: translateX(-50%);
+  animation: growLine 2s ease-out;
+}
+
+@keyframes growLine {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+/* Service item */
+.service-item {
+  position: relative;
+  margin-bottom: 80px;
+  opacity: 0;
+  animation: slideIn 0.8s ease forwards;
+}
+
+.service-item:nth-child(1) { animation-delay: 0.1s; }
+.service-item:nth-child(2) { animation-delay: 0.2s; }
+.service-item:nth-child(3) { animation-delay: 0.3s; }
+.service-item:nth-child(4) { animation-delay: 0.4s; }
+.service-item:nth-child(5) { animation-delay: 0.5s; }
+.service-item:nth-child(6) { animation-delay: 0.6s; }
+.service-item:nth-child(7) { animation-delay: 0.7s; }
+.service-item:nth-child(8) { animation-delay: 0.8s; }
+.service-item:nth-child(9) { animation-delay: 0.9s; }
+.service-item:nth-child(10) { animation-delay: 1s; }
+.service-item:nth-child(11) { animation-delay: 1.1s; }
+.service-item:nth-child(12) { animation-delay: 1.2s; }
+
+.service-item.left {
+  padding-right: 55%;
+  animation-name: slideInLeft;
+}
+.service-item.right {
+  padding-left: 55%;
+  animation-name: slideInRight;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Timeline dot */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 4px solid #868fc0;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 0 0 0 rgba(149, 154, 183, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(99, 110, 176, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(160, 170, 226, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(174, 182, 223, 0);
+  }
+}
+
+/* Service content box */
+.service-content {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 20px;
+  border: 2px solid #e0e5f2;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 4px 12px rgba(191, 195, 217, 0.08),
+    0 2px 6px rgba(230, 220, 220, 0.04);
+}
+
+.service-content:hover {
+  transform: scale(1.03);
+  border-color: #b2b7d6;
+  box-shadow: 
+    0 16px 40px rgba(183, 189, 222, 0.18),
+    0 8px 20px rgba(200, 208, 228, 0.12);
+}
+
+.service-content::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, #1428A0, #2d5dd7, #4f93ff);
+  background-size: 200% 200%;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.service-content:hover::before {
+  opacity: 1;
+}
+
+.service-number {
+  display: inline-block;
+  background: linear-gradient(135deg, #1428A0, #2d5dd7);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(207, 210, 226, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.service-content:hover .service-number {
+  transform: scale(1.1);
+}
+
+.service-title {
+  color: #020719;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-list li {
+  color: #000000;
+  font-size: 15px;
+  line-height: 1.8;
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.service-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #c7cbe4;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Connection arrow */
+.connection-arrow {
+  position: absolute;
+  top: 30px;
+  width: 50px;
+  height: 2px;
+  background: #b0b8e6;
+  z-index: 1;
+}
+
+.service-item.left .connection-arrow {
+  right: calc(45% - 10px);
+  left: auto;
+}
+
+.service-item.right .connection-arrow {
+  left: calc(45% - 10px);
+  right: auto;
+}
+
+.connection-arrow::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #bfc5e8;
+  border-right: 2px solid #b4b9d9;
+  transform: rotate(45deg);
+}
+
+.service-item.right .connection-arrow::after {
+  right: auto;
+  left: -6px;
+  transform: rotate(-135deg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 30px;
+  }
+  .timeline-dot {
+    left: 30px;
+  }
+  .service-item.left,
+  .service-item.right {
+    padding-left: 80px;
+    padding-right: 20px;
+  }
+  .connection-arrow {
+    display: none;
+  }
+  .page-header h1 {
+    font-size: 36px;
+  }
+}
+</style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+  <div class="bg-shape shape-3"></div>
+  <div class="bg-shape shape-4"></div>
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+   <div class="container px-5"><a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="../../index.html"> <img src="../../assets/icon-2.svg" style="width:36px;height:36px;border-radius:50%" alt="Hawk Dynamics">Hawk Dynamics Enterprises </a>
+   </div>
+  </nav>
+  <div style="margin-top:80px">
+   <div class="page-header">
+    <h1>Project-Oriented Services</h1>
+    <p class="subtitle">Professional • Structured • Reliable • Project-Driven</p>
+    <p class="tagline">Execution, Control &amp; Accountability</p>
+   </div>
+   <div class="timeline-container">
+    <div class="timeline-line"></div>
+    <div class="service-item left">
+     <div class="timeline-dot"></div>
+     <div class="connection-arrow"></div>
+     <div class="service-content"><span class="service-number">01</span>
+      <h3 class="service-title">BOQ-Based Material Planning</h3>
+      <ul class="service-list">
+       <li>Study project BOQ and technical specifications</li>
+       <li>Identify material scope &amp; dependencies</li>
+       <li>Optimize quantities to avoid over-procurement</li>
+       <li>Align materials with project milestones</li>
+      </ul>
+     </div>
+    </div>
+    <div class="service-item right">
+     <div class="timeline-dot"></div>
+     <div class="connection-arrow"></div>
+     <div class="service-content"><span class="service-number">02</span>
+      <h3 class="service-title">Project-Specific Vendor Finalization</h3>
+      <ul class="service-list">
+       <li>Identify project-approved vendors &amp; OEMs</li>
+       <li>Technical and commercial evaluation</li>
+       <li>Vendor compliance verification</li>
+       <li>Finalization based on cost, lead time &amp; quality</li>
+      </ul>
+     </div>
+    </div>
+    <div class="service-item left">
+     <div class="timeline-dot"></div>
+     <div class="connection-arrow"></div>
+     <div class="service-content"><span class="service-number">03</span>
+      <h3 class="service-title">Phase-Wise Material Procurement</h3>
+      <ul class="service-list">
+       <li>Procurement aligned with project phases</li>
+       <li>Just-in-time material sourcing</li>
+       <li>Avoid site congestion and inventory holding</li>
+       <li>Controlled release of materials</li>
+      </ul>
+     </div>
+    </div>
+    <div class="service-item right">
+     <div class="timeline-dot"></div>
+     <div class="connection-arrow"></div>
+     <div class="service-content"><span class="service-number">04</span>
+      <h3 class="service-title">Cost Control &amp; Budget Alignment</h3>
+      <ul class="service-list">
+       <li>Track procurement against project budget</li>
+       <li>Optimize cost without affecting specifications</li>
+       <li>Identify alternate approved materials if required</li>
+       <li>Maintain cost transparency throughout execution</li>
+      </ul>
+     </div>
+    </div>
+    <div class="service-item left">
+     <div class="timeline-dot"></div>
+     <div class="connection-arrow"></div>
+     <div class="service-content"><span class="service-number">05</span>
+      <h3 class="service-title">Lead Time &amp; Delivery Management</h3>
+      <ul class="service-list">
+       <li>Monitor vendor manufacturing timelines</li>
+       <li>Track dispatch and delivery schedules</li>
+       <li>Coordinate logistics with site requirements</li>
+       <li>Ensure timely arrival to avoid project delays</li>
+      </ul>
+     </div>
+    </div>
+    <div class="service-item right">
+     <div class="timeline-dot"></div>
+     <div class="connection-arrow"></div>
+     <div class="service-content"><span class="service-number">06</span>
+      <h3 class="service-title">Site Coordination &amp; Material Readiness</h3>
+      <ul class="service-list">
+       <li>Coordinate with project/site teams</li>
+       <li>Ensure materials are site-ready</li>
+       <li>Address site-specific requirements</li>
+       <li>Resolve material mismatch or shortages</li>
+      </ul>
+     </div>
+    </div>
+    <div class="service-item left">
+     <div class="timeline-dot"></div>
+     <div class="connection-arrow"></div>
+     <div class="service-content"><span class="service-number">07</span>
+      <h3 class="service-title">Multi-Location Project Support</h3>
+      <ul class="service-list">
+       <li>Centralized procurement for multiple sites</li>
+       <li>Location-wise material segregation</li>
+       <li>Coordinated dispatch planning</li>
+       <li>Uniform quality across all locations</li>
+      </ul>
+     </div>
+    </div>
+    <div class="service-item right">
+     <div class="timeline-dot"></div>
+     <div class="connection-arrow"></div>
+     <div class="service-content"><span class="service-number">08</span>
+      <h3 class="service-title">Documentation &amp; Compliance Handling</h3>
+      <ul class="service-list">
+       <li>Material test certificates (MTC)</li>
+       <li>Warranty &amp; guarantee documents</li>
+       <li>Invoice, packing list &amp; compliance records</li>
+       <li>Organized handover documentation</li>
+      </ul>
+     </div>
+    </div>
+    <div class="service-item left">
+     <div class="timeline-dot"></div>
+     <div class="connection-arrow"></div>
+     <div class="service-content"><span class="service-number">09</span>
+      <h3 class="service-title">Issue Resolution &amp; Risk Mitigation</h3>
+      <ul class="service-list">
+       <li>Handle supply chain disruptions</li>
+       <li>Vendor issue escalation &amp; resolution</li>
+       <li>Alternate sourcing during emergencies</li>
+       <li>Minimize impact on project timelines</li>
+      </ul>
+     </div>
+    </div>
+    <div class="service-item right">
+     <div class="timeline-dot"></div>
+     <div class="connection-arrow"></div>
+     <div class="service-content"><span class="service-number">10</span>
+      <h3 class="service-title">Project Close-Out Procurement Support</h3>
+      <ul class="service-list">
+       <li>Final material reconciliation</li>
+       <li>Spare &amp; excess material planning</li>
+       <li>Warranty activation coordination</li>
+       <li>Procurement closure reporting</li>
+      </ul>
+     </div>
+    </div>
+    <div class="service-item left">
+     <div class="timeline-dot"></div>
+     <div class="connection-arrow"></div>
+     <div class="service-content"><span class="service-number">11</span>
+      <h3 class="service-title">Long-Term Project Care &amp; AMC Support</h3>
+      <ul class="service-list">
+       <li>Support after project handover</li>
+       <li>Spare parts sourcing</li>
+       <li>Replacement &amp; upgrade coordination</li>
+       <li>Lifetime vendor &amp; material traceability</li>
+      </ul>
+     </div>
+    </div>
+    <div class="service-item right">
+     <div class="timeline-dot"></div>
+     <div class="connection-arrow"></div>
+     <div class="service-content"><span class="service-number">12</span>
+      <h3 class="service-title">Custom Project Procurement Solutions</h3>
+      <ul class="service-list">
+       <li>Non-standard or high-risk materials</li>
+       <li>Import/export coordination (if applicable)</li>
+       <li>Specialized sourcing requirements</li>
+       <li>Tailored procurement strategies</li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+  <footer class="py-4 bg-dark">
+   <div class="container text-center">
+    <p class="m-0 text-white">© Hawk Dynamics Enterprises | Rise Without Limits</p>
+   </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c524487f2467f4e',t:'MTc2OTYyMTk1MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

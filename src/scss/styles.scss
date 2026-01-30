@@ -1,12 +1,292 @@
-// Import Bootstrap
-@import "bootstrap/scss/bootstrap.scss";
+/* ==============================
+   Global Styles
+============================== */
 
-// Custom SCSS for feature component with Bootstrap icon
-.feature {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 4rem;
-    width: 4rem;
+$primary-color: #0d6efd;
+$dark-color: #0f141e;
+$text-muted: #6c757d;
+$card-radius: 12px;
+
+body {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #212529;
+  line-height: 1.6;
+}
+
+/* ==============================
+   Navbar
+============================== */
+
+.navbar {
+  background-color: $dark-color !important;
+
+  .navbar-brand {
+    font-size: 1.1rem;
+    letter-spacing: 0.3px;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .nav-link {
+    font-size: 0.95rem;
+    margin-left: 0.5rem;
+
+    &:hover {
+      color: $primary-color !important;
+    }
+  }
+}
+
+/* ==============================
+   Hero Section
+============================== */
+
+header {
+  h1 {
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+  }
+
+  p {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ==============================
+   Section Headings
+============================== */
+
+section {
+  h2 {
     font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    &.text-muted {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+  }
+}
+
+/* ==============================
+   Service Cards (What We Do)
+============================== */
+
+.service-card {
+  background: #ffffff;
+  border-radius: $card-radius;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  padding: 2rem;
+
+  h5 {
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: $text-muted;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  background: $primary-color;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 28px;
+}
+
+/* ==============================
+   Why Choose Us Section
+============================== */
+
+#why {
+  background-color: #f8f9fa;
+
+  h6 {
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $text-muted;
+  }
+}
+
+/* ==============================
+   How It Works
+============================== */
+
+section {
+  .col-lg-3 {
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+}
+
+/* ==============================
+   Locations Section
+============================== */
+
+#locations {
+  h6 {
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $text-muted;
+  }
+}
+
+/* ==============================
+   Contact Section
+============================== */
+
+#contact {
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* ==============================
+   Footer
+============================== */
+
+footer {
+  background-color: $dark-color;
+
+  p {
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+  }
+}
+.material-card {
+  background: #eef6ff;
+  border-radius: 18px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  height: 100%;
+  transition: all 0.35s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  h6 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #5f6b7a;
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    transform: translateY(-12px);
+    background: #dceeff;
+    box-shadow: 0 20px 45px rgba(13, 110, 253, 0.25);
+  }
+}
+
+/* LOGO SPACE (LIKE YOUR PORTFOLIO) */
+.material-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.2rem;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+
+  img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+  }
+}
+/* ==============================
+   What We Do (Project-style cards)
+============================== */
+
+.whatwedo-section {
+  padding: 4rem 2rem;
+}
+
+.whatwedo-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.whatwedo-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.whatwedo-card {
+  background: #eef6ff;
+  border-radius: 1rem;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(13, 110, 253, 0.25);
+  }
+}
+
+.whatwedo-card-content {
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #5f6b7a;
+    line-height: 1.5;
+  }
+}
+
+/* Logo space like your Experience cards */
+.whatwedo-logo {
+  margin-top: 1.5rem;
+  width: 64px;
+  height: 64px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+
+  img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+  }
 }

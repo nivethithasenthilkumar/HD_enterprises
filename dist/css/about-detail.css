@@ -1,0 +1,33 @@
+.about-detail {
+  padding: 90px 0;
+  background: #f8fbff;
+}
+
+.about-detail h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-detail .intro {
+  font-size: 17px;
+  color: #555;
+  max-width: 800px;
+}
+
+.detail-list {
+  margin-top: 30px;
+  padding-left: 20px;
+}
+
+.detail-list li {
+  font-size: 15px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.closing {
+  margin-top: 30px;
+  font-weight: 500;
+  color: #1b5cff;
+}

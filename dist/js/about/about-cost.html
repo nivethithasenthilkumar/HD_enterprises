@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cost Optimization | Hawk Dynamics Enterprises</title>
+
+  <!-- Tailwind CDN (as requested – unchanged) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { box-sizing: border-box; }
+    * { font-family: 'Inter', sans-serif; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Manrope', sans-serif; }
+
+    @keyframes ripple { 0%{transform:scale(1);opacity:.6} 100%{transform:scale(1.8);opacity:0} }
+    @keyframes slide-up { from{transform:translateY(30px);opacity:0} to{transform:none;opacity:1} }
+    @keyframes fade-in { from{opacity:0} to{opacity:1} }
+    @keyframes rotate-badge { 0%{transform:rotate(0)} 100%{transform:rotate(360deg)} }
+    @keyframes pulse-scale { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }
+
+    .animate-slide-up { animation: slide-up .8s ease forwards; }
+    .animate-fade-in { animation: fade-in 1s ease forwards; }
+    .animate-rotate-badge { animation: rotate-badge 8s linear infinite; }
+    .animate-pulse-scale { animation: pulse-scale 2s ease-in-out infinite; }
+
+    .samsung-blue {
+      background: linear-gradient(135deg, #0D47A1 0%, #1976D2 100%);
+    }
+
+    .hover-lift {
+      transition: all .35s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(13,71,161,.25);
+    }
+  </style>
+</head>
+
+<body class="h-full bg-white">
+
+<!-- ================= HEADER ================= -->
+<header class="border-b border-gray-200 px-10 py-4">
+  <div class="flex items-center justify-between max-w-7xl mx-auto">
+
+   <a href="../../index.html" class="flex items-center gap-3">
+  <img 
+    src="../../assets/icon-3.svg"
+    alt="Hawk Dynamics Enterprises Logo"
+    class="w-9 h-9 rounded-md object-contain"
+  >
+  <span class="font-semibold text-gray-900">
+    Hawk Dynamics Enterprises
+  </span>
+</a>
+
+
+    <a href="../../index.html#contact"
+       class="samsung-blue text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:opacity-90">
+      Contact Us
+    </a>
+
+  </div>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main class="bg-white py-16 px-6">
+
+  <div class="max-w-5xl mx-auto">
+
+    <!-- HERO -->
+    <div class="text-center mb-16 animate-fade-in">
+      <div class="w-20 h-20 mx-auto samsung-blue rounded-full flex items-center justify-center shadow-lg animate-rotate-badge mb-6">
+        <span class="text-white text-2xl font-bold">₹</span>
+      </div>
+
+      <h2 class="text-5xl font-black text-gray-900 mb-5">
+        Cost Optimization
+      </h2>
+
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        At Hawk Dynamics Enterprises, cost optimization is not about cutting
+        corners. It is about engineering value, reducing waste, and maximizing
+        return on investment through structured procurement.
+      </p>
+    </div>
+
+    <!-- CONTENT GRID -->
+    <div class="grid md:grid-cols-2 gap-8 animate-slide-up mb-14">
+
+      <!-- Card 1 -->
+      <div class="border border-gray-200 rounded-2xl p-8 hover-lift">
+        <div class="w-14 h-14 samsung-blue rounded-xl flex items-center justify-center mb-4">
+          <span class="text-white font-bold">1</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">
+          Strategic Sourcing
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Multi-vendor benchmarking, OEM comparison, and transparent
+          quotation analysis ensure competitive pricing without compromising
+          on quality or compliance.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="border border-gray-200 rounded-2xl p-8 hover-lift">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-4"
+             style="background:linear-gradient(135deg,#D4AF37,#F4E5A1)">
+          <span class="text-white font-bold">2</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">
+          Budget Engineering
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          We help clients avoid over-specification by aligning technical
+          requirements with actual operational needs and realistic budgets.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="border border-gray-200 rounded-2xl p-8 hover-lift">
+        <div class="w-14 h-14 samsung-blue rounded-xl flex items-center justify-center mb-4">
+          <span class="text-white font-bold">3</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">
+          Lifecycle Cost Focus
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Decisions are based on total ownership cost, including durability,
+          maintenance, warranty, and long-term operational efficiency.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="border border-gray-200 rounded-2xl p-8 hover-lift">
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-4"
+             style="background:linear-gradient(135deg,#D4AF37,#F4E5A1)">
+          <span class="text-white font-bold">4</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-3">
+          Smart Logistics Planning
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Optimized dispatch planning, reduced inventory holding costs,
+          and efficient delivery coordination across India.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- VALUE STATEMENT -->
+    <div class="border-2 border-gray-200 rounded-2xl p-10 text-center animate-fade-in">
+      <h3 class="text-2xl font-bold text-gray-900 mb-3">
+        Value-Driven Procurement Partnership
+      </h3>
+      <p class="text-gray-600 leading-relaxed max-w-2xl mx-auto">
+        Hawk Dynamics Enterprises delivers sustainable cost optimization
+        through structured sourcing, technical insight, and disciplined
+        execution — ensuring financial control without operational risk.
+      </p>
+    </div>
+
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="border-t border-gray-200 py-6 text-center text-sm text-gray-600">
+  © Hawk Dynamics Enterprises | Rise Without Limits
+</footer>
+
+</body>
+</html>
